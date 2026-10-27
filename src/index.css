@@ -1,0 +1,206 @@
+/* ═══════════════════════════════════════════════════
+   SHIVA CAFE2020 — GLOBAL DESIGN SYSTEM
+   TerraNova Website Concept
+   ═══════════════════════════════════════════════════ */
+
+/* ── Google Fonts ─────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── CSS Custom Properties ─────────────────────────── */
+:root {
+  /* Color palette */
+  --espresso:        #1a0f0a;    /* deep espresso brown */
+  --espresso-deep:   #100906;    /* darkest espresso */
+  --espresso-mid:    #2c1810;    /* mid-range espresso */
+  --terracotta:      #c56a48;    /* primary terracotta */
+  --terracotta-dark: #a85538;    /* darker terracotta */
+  --terracotta-light:#d98a6e;    /* lighter terracotta */
+  --cream:           #ede0d2;    /* warm cream */
+  --cream-light:     #f5ece2;    /* lightest cream */
+  --olive:           #6b7c5a;    /* muted olive green */
+  --olive-light:     #8a9e72;
+
+  /* Surface colors */
+  --bg:              #faf6f1;    /* warm white background */
+  --bg-warm:         #f3ebe0;    /* slightly warmer background */
+  --card-bg:         #ffffff;
+  --border:          #e8ddd3;
+  --border-subtle:   #f0e8df;
+
+  /* Text */
+  --text-primary:    #1a0f0a;
+  --text-secondary:  #4a3528;
+  --text-muted:      #8b6f60;
+
+  /* Typography */
+  --font-serif:      'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans:       'Inter', system-ui, 'Segoe UI', sans-serif;
+
+  /* Shadows */
+  --shadow-sm:       0 2px 8px rgba(26, 15, 10, 0.06);
+  --shadow-md:       0 8px 24px rgba(26, 15, 10, 0.1);
+  --shadow-lg:       0 20px 48px rgba(26, 15, 10, 0.14);
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-base: 0.28s ease;
+  --transition-slow: 0.45s ease;
+}
+
+/* ── Reset & Base ──────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Skip link for accessibility */
+body::before {
+  content: '';
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--terracotta);
+  color: var(--cream);
+  border-radius: 0 0 8px 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── Typography reset ──────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Focus styles ──────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Selection color ───────────────────────────────── */
+::selection {
+  background: rgba(197, 106, 72, 0.2);
+  color: var(--espresso);
+}
+
+/* ── Scrollbar styling ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-warm);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(197, 106, 72, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--terracotta);
+}
+
+
+/* ── TerraNova manual fix: Shiva Cafe2020 navbar contrast ──
+   Global selectors are intentional so these rules work even when
+   the navbar uses CSS Modules. Keep this section near the end. */
+#root header {
+  background: rgba(26, 15, 10, 0.92) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(237, 224, 210, 0.18) !important;
+  box-shadow: 0 8px 24px rgba(16, 9, 6, 0.16);
+  z-index: 1000;
+}
+
+#root header a,
+#root header button {
+  color: #f5ece2;
+}
+
+#root header a:hover,
+#root header a:focus-visible,
+#root header button:hover,
+#root header button:focus-visible {
+  color: #d98a6e;
+}
+
+#root header a[aria-label*="find" i],
+#root header a[href*="contact" i],
+#root header a[href*="location" i],
+#root header a[href*="maps" i],
+#root header button[aria-label*="find" i] {
+  border-color: #c56a48;
+}
+
+#root header a[aria-label*="find" i]:hover,
+#root header a[href*="contact" i]:hover,
+#root header a[href*="location" i]:hover,
+#root header a[href*="maps" i]:hover,
+#root header button[aria-label*="find" i]:hover {
+  background: #c56a48;
+  color: #fff8f0;
+}
+
+@media (max-width: 768px) {
+  #root header {
+    background: rgba(26, 15, 10, 0.98) !important;
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+
+  #root header a,
+  #root header button {
+    color: #f5ece2;
+  }
+}

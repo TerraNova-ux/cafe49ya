@@ -1,0 +1,160 @@
+.section {
+  padding: clamp(5rem, 10vh, 7rem) 0;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 6vw, 4rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+/* Image column */
+.imageCol {
+  position: relative;
+}
+
+.imageStack {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.imgMain {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.14);
+}
+
+.floatingCard {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background: var(--espresso);
+  color: var(--cream);
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+  text-align: center;
+  min-width: 160px;
+}
+
+.floatingEmoji {
+  font-size: 1.8rem;
+  margin: 0 0 0.35rem;
+  line-height: 1;
+}
+
+.floatingText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0;
+  opacity: 0.88;
+}
+
+/* Text column */
+.textCol {
+  padding: 1rem 0;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin: 0 0 0.75rem;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--espresso);
+  margin: 0 0 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.italic {
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.prose p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Pillars */
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.pillarIcon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.pillarLabel {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--espresso);
+  margin: 0 0 0.2rem;
+}
+
+.pillarDesc {
+  font-size: 0.87rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .imageCol {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .floatingCard {
+    right: 0.5rem;
+    bottom: -1rem;
+  }
+}
+

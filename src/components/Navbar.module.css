@@ -1,0 +1,228 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
+  padding: 0 clamp(1.25rem, 5vw, 3rem);
+}
+
+.header.scrolled {
+  background: rgba(22, 14, 8, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Wordmark */
+.wordmark {
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cream);
+  display: flex;
+  align-items: baseline;
+  gap: 0.15em;
+  flex-shrink: 0;
+}
+
+.wordmarkMain {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  letter-spacing: 0.12em;
+  color: var(--terracotta);
+}
+
+.wordmarkSub {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--cream);
+  opacity: 0.9;
+}
+
+/* Desktop nav links */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--cream);
+  opacity: 0.78;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--terracotta);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.link:hover {
+  opacity: 1;
+  color: var(--cream);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 4px;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.35rem;
+  border: 1.5px solid var(--terracotta);
+  border-radius: 100px;
+  color: var(--terracotta);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.22s ease, color 0.22s ease;
+}
+
+.cta:hover {
+  background: var(--terracotta);
+  color: var(--espresso);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 3px;
+}
+
+/* Toggle button */
+.toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cream);
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+  line-height: 0;
+}
+
+.toggle:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 2px;
+}
+
+/* Mobile drawer */
+.drawer {
+  background: rgba(22, 14, 8, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.drawerOpen {
+  max-height: 400px;
+}
+
+.drawerLinks {
+  list-style: none;
+  margin: 0;
+  padding: 1.25rem clamp(1.25rem, 5vw, 3rem) 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.drawerLink {
+  display: block;
+  text-decoration: none;
+  color: var(--cream);
+  opacity: 0.8;
+  font-size: 1.05rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.drawerLink:hover {
+  opacity: 1;
+  color: var(--terracotta-light);
+}
+
+.drawerLink:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.drawerCta {
+  border-bottom: none;
+  margin-top: 0.75rem;
+  color: var(--terracotta);
+  font-weight: 600;
+  opacity: 1;
+}
+
+@media (max-width: 820px) {
+  .links {
+    display: none;
+  }
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cta {
+    display: none;
+  }
+}
+
