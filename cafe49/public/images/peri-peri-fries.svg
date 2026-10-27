@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="periGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d94b38" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#17110f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fryPeri" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8a760"/>
+      <stop offset="40%" stop-color="#e86b36"/>
+      <stop offset="100%" stop-color="#be3f1e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#181210"/>
+  <rect width="800" height="600" fill="url(#periGlow)"/>
+
+  <!-- Metal Wire Basket / Black Serving Tray -->
+  <ellipse cx="400" cy="380" rx="200" ry="70" fill="#150f0e" opacity="0.6"/>
+  <rect x="250" y="240" width="300" height="150" rx="14" fill="#241d1a" stroke="rgba(217, 75, 56, 0.3)" stroke-width="3"/>
+
+  <!-- Peri Peri Seasoned Red-Spiced Fries -->
+  <rect x="290" y="140" width="16" height="170" rx="4" fill="url(#fryPeri)" transform="rotate(-18 290 200)"/>
+  <rect x="315" y="130" width="16" height="180" rx="4" fill="url(#fryPeri)" transform="rotate(-12 315 200)"/>
+  <rect x="340" y="125" width="16" height="185" rx="4" fill="url(#fryPeri)" transform="rotate(-6 340 200)"/>
+  <rect x="365" y="120" width="16" height="190" rx="4" fill="url(#fryPeri)"/>
+  <rect x="390" y="115" width="16" height="195" rx="4" fill="url(#fryPeri)"/>
+  <rect x="415" y="120" width="16" height="190" rx="4" fill="url(#fryPeri)"/>
+  <rect x="440" y="125" width="16" height="185" rx="4" fill="url(#fryPeri)" transform="rotate(7 440 200)"/>
+  <rect x="465" y="130" width="16" height="180" rx="4" fill="url(#fryPeri)" transform="rotate(14 465 200)"/>
+  <rect x="490" y="140" width="16" height="170" rx="4" fill="url(#fryPeri)" transform="rotate(20 490 200)"/>
+
+  <!-- Red Bird's Eye Chili Pepper Dust Flecks -->
+  <circle cx="340" cy="155" r="2.5" fill="#e82a17"/>
+  <circle cx="390" cy="135" r="3" fill="#e82a17"/>
+  <circle cx="440" cy="150" r="2.5" fill="#e82a17"/>
+  <circle cx="365" cy="175" r="2.5" fill="#e82a17"/>
+  <circle cx="415" cy="170" r="3" fill="#e82a17"/>
+  <circle cx="380" cy="205" r="2" fill="#ffdd99"/>
+  <circle cx="430" cy="210" r="2" fill="#ffdd99"/>
+  <circle cx="305" cy="170" r="2" fill="#e82a17"/>
+  <circle cx="475" cy="165" r="2" fill="#e82a17"/>
+
+  <!-- Zesty Dip Bowl -->
+  <g transform="translate(400, 360)">
+    <ellipse cx="0" cy="0" rx="45" ry="24" fill="#201815" stroke="rgba(247, 240, 231, 0.16)" stroke-width="2"/>
+    <ellipse cx="0" cy="-2" rx="38" ry="18" fill="#f58e45"/>
+    <ellipse cx="-4" cy="-5" rx="12" ry="5" fill="#ffb47b" opacity="0.8"/>
+  </g>
+
+  <!-- Label Overlay -->
+  <g transform="translate(400, 485)" text-anchor="middle">
+    <rect x="-120" y="-22" width="240" height="44" rx="22" fill="rgba(23, 17, 15, 0.85)" stroke="rgba(217, 75, 56, 0.5)" stroke-width="1.5"/>
+    <text font-family="'Syne', sans-serif" font-size="16" font-weight="800" fill="#f7f0e7" y="5">
+      SPICY PERI PERI FRIES
+    </text>
+  </g>
+</svg>

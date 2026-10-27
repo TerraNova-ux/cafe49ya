@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="wrapGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#48a04c" stop-opacity="0.25"/>
+      <stop offset="70%" stop-color="#17110f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tortilla" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e1bf"/>
+      <stop offset="50%" stop-color="#e8cf9e"/>
+      <stop offset="100%" stop-color="#d9bc84"/>
+    </linearGradient>
+    <linearGradient id="grillMarks" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b572a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#5c3818" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#181210"/>
+  <rect width="800" height="600" fill="url(#wrapGlow)"/>
+
+  <!-- Wooden Board Background -->
+  <rect x="180" y="90" width="440" height="370" rx="16" fill="#221a17" stroke="rgba(247, 240, 231, 0.08)" stroke-width="3"/>
+  <line x1="240" y1="90" x2="240" y2="460" stroke="rgba(247, 240, 231, 0.03)" stroke-width="2"/>
+  <line x1="400" y1="90" x2="400" y2="460" stroke="rgba(247, 240, 231, 0.03)" stroke-width="2"/>
+  <line x1="560" y1="90" x2="560" y2="460" stroke="rgba(247, 240, 231, 0.03)" stroke-width="2"/>
+
+  <!-- Wrapped Tortilla Rolls (Cut in half diagonally) -->
+  <!-- Left Roll -->
+  <g transform="translate(340, 275) rotate(-30)">
+    <!-- Outer roll body -->
+    <rect x="-40" y="-95" width="80" height="190" rx="20" fill="url(#tortilla)"/>
+    <!-- Grill marks -->
+    <line x1="-35" y1="-50" x2="35" y2="-50" stroke="url(#grillMarks)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-35" y1="-10" x2="35" y2="-10" stroke="url(#grillMarks)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-35" y1="30" x2="35" y2="30" stroke="url(#grillMarks)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-35" y1="70" x2="35" y2="70" stroke="url(#grillMarks)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Cut exposed cross-section at top -->
+    <ellipse cx="0" cy="-95" rx="38" ry="24" fill="#2a1f1b"/>
+    <ellipse cx="0" cy="-95" rx="36" ry="22" fill="#fff8ee"/>
+    <!-- Filling: Paneer cubes, cabbage, bell peppers -->
+    <rect x="-14" y="-105" width="16" height="14" rx="2" fill="#fffef7" stroke="#e0cfa5"/>
+    <rect x="2" y="-102" width="14" height="14" rx="2" fill="#fffef7" stroke="#e0cfa5"/>
+    <path d="M-22,-98 Q-5,-110 8,-98 Q-2,-90 -22,-98" fill="#439e47"/>
+    <path d="M-8,-92 Q10,-102 24,-92 Q10,-86 -8,-92" fill="#d94b38"/>
+    <circle cx="-5" cy="-90" r="4" fill="#f3b64a"/>
+  </g>
+
+  <!-- Right Roll Half -->
+  <g transform="translate(460, 275) rotate(25)">
+    <rect x="-38" y="-90" width="76" height="180" rx="18" fill="url(#tortilla)"/>
+    <line x1="-32" y1="-45" x2="32" y2="-45" stroke="url(#grillMarks)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-32" y1="-5" x2="32" y2="-5" stroke="url(#grillMarks)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-32" y1="35" x2="32" y2="35" stroke="url(#grillMarks)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Mint Mayo Dip Bowl -->
+  <circle cx="270" cy="360" r="34" fill="#1c1614" stroke="rgba(247, 240, 231, 0.15)" stroke-width="2"/>
+  <circle cx="270" cy="360" r="27" fill="#8ed491"/>
+  <circle cx="265" cy="355" r="4" fill="#d6f3d7"/>
+
+  <!-- Label Overlay -->
+  <g transform="translate(400, 485)" text-anchor="middle">
+    <rect x="-115" y="-22" width="230" height="44" rx="22" fill="rgba(23, 17, 15, 0.85)" stroke="rgba(72, 160, 76, 0.4)" stroke-width="1.5"/>
+    <text font-family="'Syne', sans-serif" font-size="16" font-weight="800" fill="#f7f0e7" y="5">
+      TOASTED VEG WRAP
+    </text>
+  </g>
+</svg>

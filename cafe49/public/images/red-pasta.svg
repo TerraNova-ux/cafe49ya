@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="plateGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d94b38" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#17110f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sauceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e24a35"/>
+      <stop offset="60%" stop-color="#bd2f1c"/>
+      <stop offset="100%" stop-color="#80190c"/>
+    </linearGradient>
+    <linearGradient id="pastaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcd890"/>
+      <stop offset="100%" stop-color="#e8a84c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#181210"/>
+  <rect width="800" height="600" fill="url(#plateGlow)"/>
+
+  <!-- Ceramic Plate -->
+  <circle cx="400" cy="270" r="190" fill="#251e1b" stroke="rgba(247, 240, 231, 0.12)" stroke-width="4"/>
+  <circle cx="400" cy="270" r="150" fill="#1e1816" stroke="rgba(247, 240, 231, 0.06)" stroke-width="2"/>
+
+  <!-- Tomato Sauce Bed -->
+  <ellipse cx="400" cy="270" rx="120" ry="105" fill="url(#sauceGrad)"/>
+
+  <!-- Penne Pasta Tubes -->
+  <!-- Tube 1 -->
+  <g transform="translate(350, 240) rotate(-25)">
+    <rect x="-35" y="-12" width="70" height="24" rx="4" fill="url(#pastaGrad)"/>
+    <ellipse cx="35" cy="0" rx="4" ry="12" fill="#c4832c"/>
+    <line x1="-30" y1="-5" x2="25" y2="-5" stroke="#d49237" stroke-width="2"/>
+    <line x1="-30" y1="3" x2="25" y2="3" stroke="#d49237" stroke-width="2"/>
+  </g>
+  <!-- Tube 2 -->
+  <g transform="translate(430, 230) rotate(35)">
+    <rect x="-35" y="-12" width="70" height="24" rx="4" fill="url(#pastaGrad)"/>
+    <ellipse cx="35" cy="0" rx="4" ry="12" fill="#c4832c"/>
+    <line x1="-30" y1="-5" x2="25" y2="-5" stroke="#d49237" stroke-width="2"/>
+    <line x1="-30" y1="3" x2="25" y2="3" stroke="#d49237" stroke-width="2"/>
+  </g>
+  <!-- Tube 3 -->
+  <g transform="translate(385, 290) rotate(10)">
+    <rect x="-35" y="-12" width="70" height="24" rx="4" fill="url(#pastaGrad)"/>
+    <ellipse cx="35" cy="0" rx="4" ry="12" fill="#c4832c"/>
+    <line x1="-30" y1="-5" x2="25" y2="-5" stroke="#d49237" stroke-width="2"/>
+    <line x1="-30" y1="3" x2="25" y2="3" stroke="#d49237" stroke-width="2"/>
+  </g>
+  <!-- Tube 4 -->
+  <g transform="translate(440, 285) rotate(-40)">
+    <rect x="-30" y="-10" width="60" height="20" rx="4" fill="url(#pastaGrad)"/>
+    <ellipse cx="30" cy="0" rx="3" ry="10" fill="#c4832c"/>
+  </g>
+  <!-- Tube 5 -->
+  <g transform="translate(340, 295) rotate(45)">
+    <rect x="-30" y="-10" width="60" height="20" rx="4" fill="url(#pastaGrad)"/>
+    <ellipse cx="30" cy="0" rx="3" ry="10" fill="#c4832c"/>
+  </g>
+
+  <!-- Tomato Sauce Drips & Herbs -->
+  <circle cx="390" cy="250" r="12" fill="#c53320" opacity="0.9"/>
+  <circle cx="415" cy="275" r="9" fill="#9f2111" opacity="0.9"/>
+  <circle cx="365" cy="275" r="7" fill="#bd2f1c" opacity="0.9"/>
+  <!-- Basil Leaves -->
+  <path d="M400,230 Q415,220 425,230 Q415,245 400,230 Z" fill="#48a04c"/>
+  <path d="M380,260 Q365,250 360,265 Q375,275 380,260 Z" fill="#3b8b3f"/>
+  <path d="M420,290 Q435,280 445,295 Q430,305 420,290 Z" fill="#48a04c"/>
+  <!-- Parmesan sprinkle -->
+  <circle cx="370" cy="235" r="2" fill="#fff5e6"/>
+  <circle cx="430" cy="260" r="2.5" fill="#fff5e6"/>
+  <circle cx="410" cy="295" r="2" fill="#fff5e6"/>
+  <circle cx="385" cy="280" r="2.5" fill="#fff5e6"/>
+  <circle cx="355" cy="265" r="2" fill="#fff5e6"/>
+
+  <!-- Label Overlay -->
+  <g transform="translate(400, 485)" text-anchor="middle">
+    <rect x="-130" y="-22" width="260" height="44" rx="22" fill="rgba(23, 17, 15, 0.85)" stroke="rgba(217, 75, 56, 0.4)" stroke-width="1.5"/>
+    <text font-family="'Syne', sans-serif" font-size="16" font-weight="800" fill="#f7f0e7" y="5">
+      RED ARRABBIATA PASTA
+    </text>
+  </g>
+</svg>
